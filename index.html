@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfólio de António Figueira</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <h1>António Figueira</h1>
+      <p>Frontend Developer</p>
+    </div>
+    <button class="menu-toggle" aria-label="Abrir Menu">☰</button>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#sobre">Sobre Mim</a></li>
+      <li><a href="#formacao">Formação</a></li>
+      <li><a href="#projetos">Projetos</a></li>
+      <li><a href="#contactos">Contactos</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="sobre">
+      <img src="image/pfp.jpeg" alt="Foto de Perfil" width="150" />
+      <div class="sobre-texto">
+        <h2>Sobre Mim</h2>
+        <p>
+          O meu nome é António Figueira, sou ex-estudante de Sound Design e Produção Musical.
+          Atualmente sou estudante de Frontend Development
+          JavaScript na Universidade de Lisboa através do Programa de Requalificação da Upskill.
+        </p>
+        <h3>Os meus Objetivos</h3>
+        <ul>
+          <li>Aprofundar conhecimentos em HTML e CSS</li>
+          <li>Aprender JavaScript para criar sites interativos</li>
+          <li>Entrar no mercado de trabalho como Frontend Developer</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="formacao">
+      <h2>Formação</h2>
+      <ol>
+        <li>Ensino Secundário CTN (2020)</li>
+         <li>Licenciatura em Sound Design e Produção Musical - ETIC Lisboa (2020 - 2024)</li>
+        <li>Curso de Frontend Development JavaScript - Upskill FCUL Lisboa (2025 - presente)</li>
+      </ol>
+    </section>
+
+    <section id="projetos">
+      <h2>Os meus Projetos</h2>
+      <div class="projetos-grid">
+        <figure>
+          <img src="https://placehold.co/400x300" alt="Projeto 1: Site de Notícias" />
+          <figcaption>Projeto 1: Site de Notícias</figcaption>
+        </figure>
+        <figure class="destaque">
+          <img src="https://placehold.co/400x300" alt="Projeto 2: Portfólio Pessoal" />
+          <figcaption>Projeto 2: Portfólio Pessoal (Destaque)</figcaption>
+        </figure>
+        <figure>
+          <img src="https://placehold.co/400x300" alt="Projeto 3: Loja Online" />
+          <figcaption>Projeto 3: Loja Online</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="contactos">
+      <h2>Contactos</h2>
+      <ul class="contact-links">
+        <li><a href="mailto:antonio@email.com">Enviar Email</a></li>
+        <li><a href="tel:910000000">Ligar</a></li>
+        <li><a href="https://github.com/teuuser" target="_blank" aria-label="Perfil do GitHub">GitHub</a></li>
+      </ul>
+
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3113.123!2d-9.139!3d38.722!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzhCsDQzJzE5LjIiTiA5wrA0OCcyMC40Ilc!5e0!3m2!1spt!2spt!4v123456789"
+        width="100%" height="250" style="border:0;" loading="lazy">
+      </iframe>
+
+      <form onsubmit="enviarForm(event)">
+        <div>
+          <label for="nome">Nome</label>
+          <input type="text" id="nome" required />
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <input type="email" id="email" required />
+        </div>
+        <div>
+          <label for="assunto">Assunto</label>
+          <select id="assunto">
+            <option>Recrutamento</option>
+            <option>Freelance</option>
+            <option>Outro</option>
+          </select>
+        </div>
+        <div>
+          <label for="mensagem">Mensagem</label>
+          <textarea id="mensagem" minlength="10" required placeholder="Escreva aqui a sua mensagem..."></textarea>
+        </div>
+        <button type="submit">Enviar Mensagem</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Desenvolvido por António Figueira</p>
+    <div class="footer-socials">
+      <a href="hhttps://github.com/antoniocfigueira" target="_blank" aria-label="GitHub">GitHub</a>
+      <a href="https://linkedin.com/in/" target="_blank" aria-label="LinkedIn">LinkedIn</a>
+    </div>
+  </footer>
+
+  <script>
+    function enviarForm(event) {
+      event.preventDefault();
+      alert("Obrigado pelo contacto! Responderei em breve.");
+    }
+
+    const btn = document.querySelector('.menu-toggle');
+    const menu = document.querySelector('nav ul');
+
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('aberto');
+    });
+  </script>
+</body>
+</html>
